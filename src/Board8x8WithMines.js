@@ -26,3 +26,12 @@ Board8x8WithMines.prototype.constructor = Player8x8Board;
 Board8x8WithMines.prototype.getMineCount = function () {
     return this._mines;
 };
+
+//override move player to encounter mines
+Player8x8Board.prototype.movePlayer = function(x, y){
+    // places the player at x and y
+    // zero indexed coordinates
+    // will record a mine hit
+    this._grid[this.getPlayerPositionX()][this.getPlayerPositionY()] = "-";
+    this._grid[x][y] = this._player;
+};
