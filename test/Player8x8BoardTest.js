@@ -9,6 +9,10 @@ describe("A Board with a player", function(){
 
     it("should position the player at bottom left corner by default", function(){
         expect(board.getPlayerPosition()).toBe("col: 0, row: 0");
-    })
+    });
+
+    it("grid should contain an instance of Player", function(){
+        expect(board.findPlayerInBoard() instanceof Player).toBe(true);
+    });
 
 });
