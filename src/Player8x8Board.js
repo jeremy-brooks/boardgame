@@ -31,3 +31,19 @@ Player8x8Board.prototype.findPlayerInBoard = function(){
     }
     return null;
 };
+Player8x8Board.prototype.hasPlayerWon = function(){
+    // check to see if player has reached the top row
+    // return Boolean
+    for (var colIndex = 0, col; col = this._grid[colIndex]; colIndex++ ){
+        if (col[col.length-1] === this._player){
+            return true;
+        }
+    }
+    return false;
+};
+Player8x8Board.prototype.movePlayer = function(x, y){
+    // places the player at x and y
+    // zero indexed coordinates
+    this._grid[this.getPlayerPositionX()][this.getPlayerPositionY()] = "-";
+    this._grid[x][y] = this._player;
+};

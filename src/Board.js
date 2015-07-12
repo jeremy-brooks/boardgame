@@ -5,8 +5,14 @@ function Board(columns, rows) {
         /* construct the grid based on length * width params injected */
         scope._grid = [];
         var newCol = null;
+        var rowCount = NaN;
         for (var col = 0; col < columns; col++) {
-            newCol = new Array(rows);
+            newCol = [];
+            rowCount = rows;
+            while (rowCount){
+                newCol.push(" ");
+                rowCount--;
+            }
             scope._grid.push(newCol);
         }
     }(this, columns, rows);
