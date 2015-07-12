@@ -7,12 +7,13 @@ describe("A Board with a player", function(){
         board = new Player8x8Board(player);
     });
 
-    it("should position the player at bottom left corner by default", function(){
-        expect(board.getPlayerPosition()).toBe("col: 0, row: 0");
+    it("should contain an instance of Player", function(){
+        expect(board.findPlayerInBoard() instanceof Player).toBe(true);
     });
 
-    it("grid should contain an instance of Player", function(){
-        expect(board.findPlayerInBoard() instanceof Player).toBe(true);
+    it("positions player at bottom left corner by default", function(){
+        expect(board.getPlayerPositionY()).toBe(0);
+        expect(board.getPlayerPositionX()).toBe(0);
     });
 
 });

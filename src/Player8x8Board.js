@@ -12,8 +12,13 @@ Player8x8Board.prototype = Object.create(Board.prototype);
 Player8x8Board.prototype.constructor = Board;
 
 // new methods for this child of Board
-Player8x8Board.prototype.getPlayerPosition = function(){
-    return this._player.getPosition();
+Player8x8Board.prototype.getPlayerPositionY = function(){
+    // return an array containing coordinates
+    return this._player.getRow();
+};
+Player8x8Board.prototype.getPlayerPositionX = function(){
+    // return an array containing coordinates
+    return this._player.getCol();
 };
 Player8x8Board.prototype.findPlayerInBoard = function(){
     // analyse the board for the player and return them if found

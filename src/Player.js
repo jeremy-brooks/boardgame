@@ -12,5 +12,5 @@ Player.prototype.getCol = function(){
 };
 
 Player.prototype.getPosition = function(){
-    return "col: " + this.getCol() + ", row: " + this.getRow();
+    return [this.getCol(), this.getRow()];
 }
