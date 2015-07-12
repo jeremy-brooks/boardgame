@@ -1,7 +1,7 @@
 function Board(columns, rows) {
     this._grid = null;
 
-    function _constructor(scope, /*int*/columns, /*int*/rows) {
+    var _constructor = function (scope, /*int*/columns, /*int*/rows) {
         /* construct the grid based on length * width params injected */
         scope._grid = [];
         var newCol = null;
