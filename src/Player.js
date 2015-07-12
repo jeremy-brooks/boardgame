@@ -10,3 +10,7 @@ Player.prototype.getRow = function(){
 Player.prototype.getCol = function(){
     return this._col;
 };
+
+Player.prototype.getPosition = function(){
+    return "col: " + this.getCol() + ", row: " + this.getRow();
+}
